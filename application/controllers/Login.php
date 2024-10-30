@@ -51,6 +51,11 @@ class Login extends CI_Controller {
             }
 
         }
+        else {
+            $_SESSION['loginCheck'] = 'err';
+            //$this->load->view('index');
+            header('Location:' . base_url('login/')); 
+        }
 
     }
     
